@@ -49,10 +49,10 @@ const navMenu = [
   },
 ];
 
-// const playlists = new Array(30).fill(1).map((_, i) => `Plyalist ${i + 1}`);
+const playlists = new Array(30).fill(1).map((_, i) => `Plyalist ${i + 1}`);
 
 const SideBar = () => {
-  const { playlists } = usePlaylist();
+  // const { playlists } = usePlaylist();
 
   return (
     <Box
@@ -116,10 +116,10 @@ const SideBar = () => {
         <Box height="66%" overflowY="auto" paddingY="20px">
           <List spacing={2}>
             {playlists.map((playlist) => (
-              <ListItem paddingX="20px" key={playlist.id}>
+              <ListItem paddingX="20px" key={playlist}>
                 <LinkBox>
                   <Link href="/" passHref>
-                    <LinkOverlay>{playlist.name}</LinkOverlay>
+                    <LinkOverlay>{playlist}</LinkOverlay>
                   </Link>
                 </LinkBox>
               </ListItem>
